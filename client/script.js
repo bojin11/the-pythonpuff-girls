@@ -81,9 +81,9 @@ function submitPost(e){
   e.preventDefault();
 
   const postData = {
-      id: 3,
-      name: e.target.name.value,
-      title: e.target.title.value,
+      // id: 3,
+      // name: e.target.name.value,
+      // title: e.target.title.value,
       message: e.target.newPostText.value,
       //comments: e.target.comments.value
   };
@@ -96,7 +96,7 @@ function submitPost(e){
       }
   };
 
-  fetch('http://localhost:8008/posts', options)
+  fetch('http://localhost:8008/posts/new', options)
       .then(r => r.json())
       .then(appendPost)
       .catch(console.warn)
@@ -109,7 +109,7 @@ function appendPosts(posts){
 
 function appendPost(postData){
   const newLi = document.createElement('li');
-  newLi.textContent = `Name: ${postData.name} || Title: ${postData.title} || Message: ${postData.message}`
+  newLi.textContent = ` Message: ${postData.message}`
   const postsList = document.querySelector('.post-message');
   postsList.append(newLi);
 };
