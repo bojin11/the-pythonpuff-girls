@@ -50,7 +50,7 @@ function appendPosts(posts){
 
 function appendPost(postData){
   const newLi = document.createElement('li');
-  newLi.textContent = ` Message: ${postData.message}`
+  newLi.textContent = ` Message: ${postData.message} || gifUrl: ${postData.gifUrl}`
   const postsList = document.querySelector('.post-message');
   postsList.append(newLi);
 };

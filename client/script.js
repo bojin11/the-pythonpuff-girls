@@ -3,9 +3,12 @@
 const apiDomain = "http://localhost:8008/";
 
 
+
 // gif selectors
 const gifSearchButton = document.getElementById("gifSearchButton");
 const addGifButton = document.querySelector("#addGif");
+
+
 
 
 
@@ -28,11 +31,14 @@ gifSearchButton.addEventListener("click", (e) => {
             const tempImg = document.createElement("img");
             tempImg.classList.add("gif-img");
             tempImg.src = obj[i].images.original.url;
+
+            
             
             // Add an event listener to each photo
             tempImg.addEventListener("click", (e) => {
                 // store the source of the clicked image
-                const imgSource = e.target.src;
+            imgSource = e.target.src;
+              
                 
                 // close the popup
             document.getElementById("gifBox").style.display = "none";
@@ -47,12 +53,25 @@ gifSearchButton.addEventListener("click", (e) => {
   
             document.querySelector("form").append(gif);
 
+
+
         });
         gifDisplay.append(tempImg);
+
+      
+
     }
 })
+
 .catch((error) => console.log(error));
+
 });
+
+
+
+
+
+
 
 // makes the gif search div display
 addGifButton.addEventListener("click", (e) => {
