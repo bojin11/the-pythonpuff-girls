@@ -24,7 +24,7 @@ function submitPost(e){
   e.preventDefault();
 
   const postData = {
-    message: e.target.querySelector(".newPostText").value,
+    message: e.target.querySelector("#newPostText").value,
 
   };
 
@@ -49,40 +49,45 @@ function appendPosts(posts){
 
 
 function appendPost(postData){
+<<<<<<< HEAD
   const newLi = document.createElement('li');
   newLi.textContent = ` Message: ${postData.message} || gifUrl: ${postData.gifUrl}`
+=======
+  const newPara = document.createElement('p');
+  newPara.textContent = `${postData.message}`
+>>>>>>> 14f4de295265ad01b661672ced198e439cf6ba1e
   const postsList = document.querySelector('.post-message');
-  postsList.append(newLi);
+  postsList.append(newPara);
 };
 
 
 
-const btn = document.querySelector('#btn')
-const newPost = document.querySelector('#newPost');
+// const btn = document.querySelector('#btn')
+// const newPost = document.querySelector('#newPost');
 
-btn.addEventListener('click', showDiv)
-btn.addEventListener('click', postText)
+// btn.addEventListener('click', showDiv)
+// btn.addEventListener('click', postText)
 
-function showDiv(e) {
-    e.preventDefault();
-    let newPost = document.getElementById('showDiv');
-    newPost.style.display = 'block';
+// function showDiv(e) {
+//     e.preventDefault();
+//     let newPost = document.getElementById('showDiv');
+//     newPost.style.display = 'block';
     
-}
-function postText(e) {
-    e.preventDefault();
-    let inputVal = document.querySelector('.newPostText').value;
-    console.log(newPost.append(inputVal));
-}
+// }
+// function postText(e) {
+//     e.preventDefault();
+//     let inputVal = document.querySelector('.newPostText').value;
+//     console.log(newPost.append(inputVal));
+// }
 
-function createPost(data) {
-    e.preventDefault();
-    fetch()
-    for(let i = 0; i <= data.length; i++){
-        const newDiv = document.createElement('div');
-        newDiv.textContent = data[i].message;
-    }
-}
+// function createPost(data) {
+//     e.preventDefault();
+//     fetch()
+//     for(let i = 0; i <= data.length; i++){
+//         const newDiv = document.createElement('div');
+//         newDiv.textContent = data[i].message;
+//     }
+// }
 
 // function appendPost(postData){
 //     const newDiv = document.createElement('div');
